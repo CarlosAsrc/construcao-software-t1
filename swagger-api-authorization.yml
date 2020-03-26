@@ -1,0 +1,31 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "1.0.0"
+  title: "API De Autenticação"
+host: "atuthenticatio-service.com"
+basePath: "/v1"
+tags:
+- name: "Authentication"
+  description: "Authentication API"
+
+schemes:
+- "https"
+- "http"
+paths:
+  /authenticate:
+    post:
+      tags:
+      - "Authentication"
+      summary: "Authenticate a user"
+      description: ""
+      operationId: ""
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        401:
+          description: "Unauthorized"
