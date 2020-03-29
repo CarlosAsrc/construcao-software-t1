@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  node:
+    build:
+      context: ./auth-app
+      dockerfile: Dockerfile
+    container_name: "node-app"
+    ports:
+      - "8082:8080"
+  keycloak:
+    build:
+      context: ./keycloak
+      dockerfile: Dockerfile
+    container_name: "keycloak"
+    ports:
+      - "8081:8080"
